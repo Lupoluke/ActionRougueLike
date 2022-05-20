@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\ActionRougueLike.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{8A803729-7594-40EA-B382-8A68DCA01EC5}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ActionRougueLike.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ActionRougueLikeEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{ABC27DA7-395A-45DF-8011-E3D79B75F5DE}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\ActionRougueLike">
+      <UniqueIdentifier>{5FABBA0D-DEC6-4961-A854-572C8ED6992C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ActionRougueLike\ActionRougueLike.Build.cs">
+      <Filter>Source\ActionRougueLike</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\ActionRougueLike\ActionRougueLike.cpp">
+      <Filter>Source\ActionRougueLike</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ActionRougueLike\ActionRougueLike.h">
+      <Filter>Source\ActionRougueLike</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ActionRougueLike\ActionRougueLikeGameModeBase.cpp">
+      <Filter>Source\ActionRougueLike</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ActionRougueLike\ActionRougueLikeGameModeBase.h">
+      <Filter>Source\ActionRougueLike</Filter>
+    </ClInclude>
+    <Filter Include="Source\ActionRougueLike\Private">
+      <UniqueIdentifier>{75B96B64-A3B5-4929-AF01-DBDE74BF9428}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ActionRougueLike\Private\SCharacter.cpp">
+      <Filter>Source\ActionRougueLike\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\ActionRougueLike\Public">
+      <UniqueIdentifier>{383BE679-53B3-4E5F-B393-65A5384E06F7}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ActionRougueLike\Public\SCharacter.h">
+      <Filter>Source\ActionRougueLike\Public</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

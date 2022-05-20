@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"F:\\ToolPerUnreal\\GitHubRepository\\ActionRougueLike\\ActionRougueLike\\Source\\ActionRougueLike\\ActionRougueLike.Build.cs",
+		"F:\\ToolPerUnreal\\GitHubRepository\\ActionRougueLike\\ActionRougueLike\\Source\\ActionRougueLike.Target.cs",
+		"F:\\ToolPerUnreal\\GitHubRepository\\ActionRougueLike\\ActionRougueLike\\Source\\ActionRougueLikeEditor.Target.cs"
+	],
+	"EngineVersion": "4.26.2"
+}
