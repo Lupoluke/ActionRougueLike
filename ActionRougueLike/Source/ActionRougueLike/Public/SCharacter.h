@@ -9,17 +9,13 @@
 class UCameraComponent;
 class USpringArmComponent;
 class USInteractionComponent;
+class UAnimMontage;
 
 UCLASS()
 class ACTIONROUGUELIKE_API ASCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
-
-protected:
-
-	UPROPERTY(EditAnywhere)
-	TSubclassOf<AActor> ProjectileClass;
 
 
 public:
@@ -44,6 +40,17 @@ protected:
 	UPROPERTY(VisibleAnywhere)
 	USInteractionComponent* InteractionComp;
 
+	//projectile class
+	UPROPERTY(EditAnywhere, Category = "Attack")
+	TSubclassOf<AActor> ProjectileClass;
+
+
+	//animation
+	UPROPERTY(EditAnywhere, Category = "Attack")
+	UAnimMontage* AttackAnim;
+
+	//timerHandler
+	FTimerHandle TimerHandle_PrimaryAttack;
 
 	
 	// Called when the game starts or when spawned
@@ -56,7 +63,11 @@ protected:
 	//attack function --> triggera un'azione e non richiede parametri in ingresso
 	void PrimaryAttack();
 
-	//interact
+	//timer attack function
+	void PrimaryAttack_TimeElapsed();
+
+
+	//interact function
 	void PrimaryInteract();
 
 

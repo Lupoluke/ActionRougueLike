@@ -53,31 +53,45 @@ void USInteractionComponent::PrimaryInteract()
 
 	FVector End = EyeLocation + (EyeRotation.Vector() * 1000);
 	
-	FHitResult Hit;
+	// con un linetrace
+	//bool bBlockingHit = GetWorld()->LineTraceSingleByObjectType(Hit, EyeLocation, End, ObjectQueryParams);
 
-	GetWorld()->LineTraceSingleByObjectType(Hit, EyeLocation, End, ObjectQueryParams);
+	TArray<FHitResult> Hits;
+	float Radius = 30.f;
 
-	AActor* HitActor = Hit.GetActor();
+	FCollisionShape Shape;
+	Shape.SetSphere(Radius);
 
-	if (HitActor)
-
-		{
-
-		//verifica se l'attore colpito implementa l'interfaccia
-			if ( HitActor->Implements<USGameplayInterface>() )
+	//crea un sphereoverlapObject
+	bool bBlockingHit = GetWorld()->SweepMultiByObjectType(Hits, EyeLocation, End, FQuat::Identity, ObjectQueryParams, Shape);
 	
-			{
-			
-				APawn* MyPawn = Cast<APawn>(MyOwner);
-				//esegui l'interfaccia
-				ISGameplayInterface::Execute_Interact(HitActor, MyPawn);
+	FColor LineColor = bBlockingHit ? FColor::Green : FColor::Red;
 
-			}
-
-
+		//foreach style
+		for (FHitResult Hit : Hits)
+		{	
+			AActor* HitActor = Hit.GetActor();
+			if (HitActor)
+				{
+				//verifica se l'attore colpito implementa l'interfaccia
+				if (HitActor->Implements<USGameplayInterface>())
+					{
+					APawn* MyPawn = Cast<APawn>(MyOwner);
+					//esegui l'interfaccia
+					ISGameplayInterface::Execute_Interact(HitActor, MyPawn);
+					break;
+					}
+				}
+			DrawDebugSphere(GetWorld(), Hit.ImpactPoint, Radius, 32, LineColor , false, 3.0f);
 		}
 
-	DrawDebugLine(GetWorld(), EyeLocation, End, FColor::Red, false, 5.0f, 0, 2.0f );
+		
+			
+	DrawDebugLine(GetWorld(), EyeLocation, End, LineColor, false, 5.0f, 0, 2.0f );
+
+	
+
+
 }
 
 

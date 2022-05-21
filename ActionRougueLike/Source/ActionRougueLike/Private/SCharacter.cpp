@@ -112,20 +112,22 @@ void ASCharacter::MoveRight(float Value)
 
 void ASCharacter::PrimaryAttack()
 {
+	//play un'animazione
+	PlayAnimMontage(AttackAnim);
+	//crea un timer --> dopo 1 secondo il timer lancerà la funzione primaryattack...
+	GetWorldTimerManager().SetTimer(TimerHandle_PrimaryAttack, this, &ASCharacter::PrimaryAttack_TimeElapsed, 0.1f);
+	//se il giocatore muore interrompi il timer--> timer è la variabile timerhandle_PrimaryAttack
+	//GetWorldTimerManager().ClearTimer(TimerHandle_PrimaryAttack);
+}
 
+void ASCharacter::PrimaryAttack_TimeElapsed()
+{
 	FVector HandLocation = GetMesh()->GetSocketLocation("Muzzle_01");
-
-
 	FTransform SpawnTM = FTransform(GetControlRotation(), HandLocation);
-	
-
 	FActorSpawnParameters SpawnParams;
-
 	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-
 	//spawn an object passa attraverso il World
 	GetWorld()->SpawnActor<AActor>(ProjectileClass, SpawnTM, SpawnParams);
-
 }
 
 void ASCharacter::PrimaryInteract()
