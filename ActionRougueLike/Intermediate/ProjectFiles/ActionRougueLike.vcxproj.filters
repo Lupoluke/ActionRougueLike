@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ActionRougueLike.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{8A803729-7594-40EA-B382-8A68DCA01EC5}</UniqueIdentifier>
+      <UniqueIdentifier>{EC4338AE-858A-4DDA-9328-D6396672F7A1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ActionRougueLike.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{ABC27DA7-395A-45DF-8011-E3D79B75F5DE}</UniqueIdentifier>
+      <UniqueIdentifier>{D7AD00C1-3B98-417A-A8A4-A5EDBDBE59E7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,8 +23,11 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\ActionRougueLike">
-      <UniqueIdentifier>{5FABBA0D-DEC6-4961-A854-572C8ED6992C}</UniqueIdentifier>
+      <UniqueIdentifier>{BC68579E-5D84-452B-836A-048464A50D6D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ActionRougueLike\ActionRougueLike.Build.cs">
       <Filter>Source\ActionRougueLike</Filter>
@@ -42,15 +45,45 @@
       <Filter>Source\ActionRougueLike</Filter>
     </ClInclude>
     <Filter Include="Source\ActionRougueLike\Private">
-      <UniqueIdentifier>{75B96B64-A3B5-4929-AF01-DBDE74BF9428}</UniqueIdentifier>
+      <UniqueIdentifier>{E4DDB5FE-AD7C-469C-9416-53AC2AAC5AF0}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ActionRougueLike\Private\ExplosiveObject.cpp">
+      <Filter>Source\ActionRougueLike\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ActionRougueLike\Private\SCharacter.cpp">
       <Filter>Source\ActionRougueLike\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ActionRougueLike\Private\SGameplayInterface.cpp">
+      <Filter>Source\ActionRougueLike\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ActionRougueLike\Private\SInteractionComponent.cpp">
+      <Filter>Source\ActionRougueLike\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ActionRougueLike\Private\SItemChest.cpp">
+      <Filter>Source\ActionRougueLike\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ActionRougueLike\Private\SMagicProjectile.cpp">
+      <Filter>Source\ActionRougueLike\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\ActionRougueLike\Public">
-      <UniqueIdentifier>{383BE679-53B3-4E5F-B393-65A5384E06F7}</UniqueIdentifier>
+      <UniqueIdentifier>{DA49BBE4-9D1F-4233-A8E6-8DE41E22E3DF}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\ActionRougueLike\Public\ExplosiveObject.h">
+      <Filter>Source\ActionRougueLike\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ActionRougueLike\Public\SCharacter.h">
+      <Filter>Source\ActionRougueLike\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ActionRougueLike\Public\SGameplayInterface.h">
+      <Filter>Source\ActionRougueLike\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ActionRougueLike\Public\SInteractionComponent.h">
+      <Filter>Source\ActionRougueLike\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ActionRougueLike\Public\SItemChest.h">
+      <Filter>Source\ActionRougueLike\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ActionRougueLike\Public\SMagicProjectile.h">
       <Filter>Source\ActionRougueLike\Public</Filter>
     </ClInclude>
   </ItemGroup>

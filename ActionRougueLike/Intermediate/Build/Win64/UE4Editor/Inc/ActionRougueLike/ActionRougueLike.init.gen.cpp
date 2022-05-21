@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeActionRougueLike_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x4311DC8B,
-				0xE5E3A41A,
+				0xBA87AB34,
+				0x383FDBF4,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
