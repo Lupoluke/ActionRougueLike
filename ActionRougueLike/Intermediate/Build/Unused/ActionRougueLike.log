@@ -1,12 +1,3 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (F:\ToolPerUnreal\GitHubRepository\ActionRougueLike).
-  Building ActionRougueLikeEditor...
-  Using Visual Studio 2019 14.32.31329 toolchain (F:\Compilatori\VisualStudio_2022\VC\Tools\MSVC\14.32.31326) and Windows 10.0.20348.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 32 processes...
-    [1/4] SCharacter.cpp
-    [2/4] UE4Editor-ActionRougueLike.lib
-       Creazione della libreria F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Development\ActionRougueLike\UE4Editor-ActionRougueLike.lib e dell'oggetto F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Development\ActionRougueLike\UE4Editor-ActionRougueLike.exp
-    [3/4] UE4Editor-ActionRougueLike.dll
-       Creazione della libreria F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Development\ActionRougueLike\UE4Editor-ActionRougueLike.suppressed.lib e dell'oggetto F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Development\ActionRougueLike\UE4Editor-ActionRougueLike.suppressed.exp
-    [4/4] ActionRougueLikeEditor.target
-  Total time in Parallel executor: 1,25 seconds
-  Total execution time: 1,56 seconds
+  Target is up to date
+  Total execution time: 0,29 seconds

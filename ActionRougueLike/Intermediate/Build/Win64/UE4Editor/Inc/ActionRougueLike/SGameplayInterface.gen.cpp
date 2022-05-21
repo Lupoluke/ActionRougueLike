@@ -59,7 +59,7 @@ void EmptyLinkFunctionForGeneratedCodeSGameplayInterface() {}
 		{ "ToolTip", "chi sta interagendo con l'oggetto" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USGameplayInterface_Interact_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USGameplayInterface, nullptr, "Interact", nullptr, nullptr, sizeof(SGameplayInterface_eventInteract_Parms), Z_Construct_UFunction_USGameplayInterface_Interact_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USGameplayInterface_Interact_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USGameplayInterface_Interact_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USGameplayInterface_Interact_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_USGameplayInterface_Interact_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USGameplayInterface, nullptr, "Interact", nullptr, nullptr, sizeof(SGameplayInterface_eventInteract_Parms), Z_Construct_UFunction_USGameplayInterface_Interact_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USGameplayInterface_Interact_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020C00, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USGameplayInterface_Interact_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USGameplayInterface_Interact_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_USGameplayInterface_Interact()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -88,7 +88,7 @@ void EmptyLinkFunctionForGeneratedCodeSGameplayInterface() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_ActionRougueLike,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_USGameplayInterface_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_USGameplayInterface_Interact, "Interact" }, // 3297138924
+		{ &Z_Construct_UFunction_USGameplayInterface_Interact, "Interact" }, // 585728426
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USGameplayInterface_Statics::Class_MetaDataParams[] = {
@@ -122,7 +122,7 @@ void EmptyLinkFunctionForGeneratedCodeSGameplayInterface() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USGameplayInterface, 2291196931);
+	IMPLEMENT_CLASS(USGameplayInterface, 1307040957);
 	template<> ACTIONROUGUELIKE_API UClass* StaticClass<USGameplayInterface>()
 	{
 		return USGameplayInterface::StaticClass();

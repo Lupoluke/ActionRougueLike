@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeActionRougueLike_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xEEA7F820,
+				0xE497EE62,
 				0x383FDBF4,
 				METADATA_PARAMS(nullptr, 0)
 			};
