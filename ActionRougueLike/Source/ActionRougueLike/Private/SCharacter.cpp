@@ -6,6 +6,7 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "SInteractionComponent.h"
+#include "SAttributeComponent.h"
 
 
 // Sets default values
@@ -31,6 +32,9 @@ ASCharacter::ASCharacter()
 
 	//aggiungi l'interaction component
 	InteractionComp = CreateDefaultSubobject<USInteractionComponent>("InteractionComp");
+
+	//aggiungi l'attribute component
+	AttributeComp = CreateDefaultSubobject<USAttributeComponent>("AttributeComp");
 
 }
 
@@ -122,14 +126,64 @@ void ASCharacter::PrimaryAttack()
 
 void ASCharacter::PrimaryAttack_TimeElapsed()
 {
-	FVector HandLocation = GetMesh()->GetSocketLocation("Muzzle_01");
-	FTransform SpawnTM = FTransform(GetControlRotation(), HandLocation);
-	FActorSpawnParameters SpawnParams;
-	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-	//crea un instigator
-	SpawnParams.Instigator = this;
-	//spawn an object passa attraverso il World
-	GetWorld()->SpawnActor<AActor>(ProjectileClass, SpawnTM, SpawnParams);
+		//ensure viene eseguito una sola volta; ensurealways sempre (ensure and ensure always non corrono su shipped build); check blocca l'intero engine
+	if ( (ProjectileClass) )
+
+		{
+
+		FVector HandLocation = GetMesh()->GetSocketLocation("Muzzle_01");
+		FTransform SpawnTM = FTransform(GetControlRotation(), HandLocation);
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+		SpawnParams.Instigator = this;
+		//spawn an object passa attraverso il World
+		GetWorld()->SpawnActor<AActor>(ProjectileClass, SpawnTM, SpawnParams);
+		
+		/* assignment 2 non funziona
+		FVector HandLocation = GetMesh()->GetSocketLocation("Muzzle_01");
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+		//crea un instigator
+		SpawnParams.Instigator = this;
+
+		//Crea una sfera
+		FCollisionShape Shape;
+		Shape.SetSphere(20.0f);
+
+		//Ignora il giocatore
+		FCollisionQueryParams Params;
+		Params.AddIgnoredActor(this);
+
+		FCollisionObjectQueryParams ObjParams;
+		ObjParams.AddObjectTypesToQuery(ECC_WorldDynamic);
+		ObjParams.AddObjectTypesToQuery(ECC_WorldStatic);
+		ObjParams.AddObjectTypesToQuery(ECC_Pawn);
+
+		FVector TraceStart = CameraComp->GetComponentLocation();
+		FVector TraceEnd = CameraComp->GetComponentLocation() + (GetControlRotation().Vector() * 5000);
+
+		FHitResult Hit;
+		//return true with a blocking hit
+		if (GetWorld()->SweepSingleByObjectType(Hit, TraceStart, TraceEnd, FQuat::Identity, ObjParams, Shape, Params))
+		{
+			//overwrite traceend with impact point on world
+			TraceEnd = Hit.ImpactPoint;
+		}
+		
+		//fai una nuova direzione rotazione dalla mano e punta al centro impatto
+		FRotator ProjRotation = FRotationMatrix::MakeFromX(TraceEnd - HandLocation).Rotator();
+
+		//dai le coordinate dello spawn
+		FTransform SpawnTM = FTransform(ProjRotation, HandLocation);
+
+		//spawn an object passa attraverso il World
+		GetWorld()->SpawnActor<AActor>(ProjectileClass, SpawnTM, SpawnParams);
+	
+		*/
+
+		}
+
+
 }
 
 void ASCharacter::PrimaryInteract()

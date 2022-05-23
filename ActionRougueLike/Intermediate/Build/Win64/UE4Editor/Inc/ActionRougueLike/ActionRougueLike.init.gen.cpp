@@ -11,18 +11,22 @@
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeActionRougueLike_init() {}
+	ACTIONROUGUELIKE_API UFunction* Z_Construct_UDelegateFunction_ActionRougueLike_OnHealthChanged__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_ActionRougueLike()
 	{
 		static UPackage* ReturnPackage = nullptr;
 		if (!ReturnPackage)
 		{
+			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_ActionRougueLike_OnHealthChanged__DelegateSignature,
+			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/ActionRougueLike",
-				nullptr,
-				0,
+				SingletonFuncArray,
+				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xE497EE62,
-				0x383FDBF4,
+				0x283792BF,
+				0xA3E54100,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

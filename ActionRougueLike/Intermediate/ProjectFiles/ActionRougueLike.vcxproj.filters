@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ActionRougueLike.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{EC4338AE-858A-4DDA-9328-D6396672F7A1}</UniqueIdentifier>
+      <UniqueIdentifier>{FFD0565B-E4FF-4EDA-9899-2747B0C92FC1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ActionRougueLike.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{D7AD00C1-3B98-417A-A8A4-A5EDBDBE59E7}</UniqueIdentifier>
+      <UniqueIdentifier>{7FEE4E2A-F11F-44E6-A3C5-164C4F4A071B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ActionRougueLike">
-      <UniqueIdentifier>{BC68579E-5D84-452B-836A-048464A50D6D}</UniqueIdentifier>
+      <UniqueIdentifier>{2468AE50-93C0-45A7-81A9-EB0695C744B2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ActionRougueLike\ActionRougueLike.Build.cs">
       <Filter>Source\ActionRougueLike</Filter>
@@ -45,9 +45,12 @@
       <Filter>Source\ActionRougueLike</Filter>
     </ClInclude>
     <Filter Include="Source\ActionRougueLike\Private">
-      <UniqueIdentifier>{E4DDB5FE-AD7C-469C-9416-53AC2AAC5AF0}</UniqueIdentifier>
+      <UniqueIdentifier>{AE58F343-9139-4474-8589-59863554F974}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ActionRougueLike\Private\ExplosiveObject.cpp">
+      <Filter>Source\ActionRougueLike\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ActionRougueLike\Private\SAttributeComponent.cpp">
       <Filter>Source\ActionRougueLike\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ActionRougueLike\Private\SCharacter.cpp">
@@ -66,9 +69,12 @@
       <Filter>Source\ActionRougueLike\Private</Filter>
     </ClCompile>
     <Filter Include="Source\ActionRougueLike\Public">
-      <UniqueIdentifier>{DA49BBE4-9D1F-4233-A8E6-8DE41E22E3DF}</UniqueIdentifier>
+      <UniqueIdentifier>{80D31790-5842-4D6D-A814-F9C6B1518659}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\ActionRougueLike\Public\ExplosiveObject.h">
+      <Filter>Source\ActionRougueLike\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ActionRougueLike\Public\SAttributeComponent.h">
       <Filter>Source\ActionRougueLike\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ActionRougueLike\Public\SCharacter.h">

@@ -1,0 +1,29 @@
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Development\ActionRougueLike\Definitions.ActionRougueLike.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Source\ActionRougueLike\Public\SBaseProjectileClass.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Inc\ActionRougueLike\SBaseProjectileClass.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/SphereComponent.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SphereComponent.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Particles/ParticleSystemComponent.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Particles/ParticleSystem.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Particles/ParticlePerfStats.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ParticleSystem.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Particles/Emitter.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Emitter.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ParticleSystemComponent.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h

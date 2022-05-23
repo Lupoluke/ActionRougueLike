@@ -10,6 +10,7 @@ class UCameraComponent;
 class USpringArmComponent;
 class USInteractionComponent;
 class UAnimMontage;
+class USAttributeComponent;
 
 UCLASS()
 class ACTIONROUGUELIKE_API ASCharacter : public ACharacter
@@ -37,8 +38,13 @@ protected:
 	UCameraComponent* CameraComp;
 
 	//add the interaction component
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category = "Component")
 	USInteractionComponent* InteractionComp;
+
+	//add l'attribute component
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Component")
+	USAttributeComponent* AttributeComp;
+
 
 	//projectile class
 	UPROPERTY(EditAnywhere, Category = "Attack")

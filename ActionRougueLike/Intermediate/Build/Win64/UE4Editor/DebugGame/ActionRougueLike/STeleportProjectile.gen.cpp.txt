@@ -1,0 +1,18 @@
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\DebugGame\ActionRougueLike\Definitions.ActionRougueLike.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Source\ActionRougueLike/Public/STeleportProjectile.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Source\ActionRougueLike\Public\SBaseProjectileClass.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Inc\ActionRougueLike\SBaseProjectileClass.generated.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Inc\ActionRougueLike\STeleportProjectile.generated.h
