@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ActionRougueLike.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{FFD0565B-E4FF-4EDA-9899-2747B0C92FC1}</UniqueIdentifier>
+      <UniqueIdentifier>{2B21EE0F-616D-42B2-97DF-13F35E4C9231}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ActionRougueLike.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{7FEE4E2A-F11F-44E6-A3C5-164C4F4A071B}</UniqueIdentifier>
+      <UniqueIdentifier>{1512EFF8-95AE-4CD0-BC7B-690601A25465}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ActionRougueLike">
-      <UniqueIdentifier>{2468AE50-93C0-45A7-81A9-EB0695C744B2}</UniqueIdentifier>
+      <UniqueIdentifier>{699EB042-06B2-45C0-B8FA-B96D4A120443}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ActionRougueLike\ActionRougueLike.Build.cs">
       <Filter>Source\ActionRougueLike</Filter>
@@ -45,7 +45,7 @@
       <Filter>Source\ActionRougueLike</Filter>
     </ClInclude>
     <Filter Include="Source\ActionRougueLike\Private">
-      <UniqueIdentifier>{AE58F343-9139-4474-8589-59863554F974}</UniqueIdentifier>
+      <UniqueIdentifier>{503A702A-4D7E-493A-A41A-B121CFE0FDF0}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ActionRougueLike\Private\ExplosiveObject.cpp">
       <Filter>Source\ActionRougueLike\Private</Filter>
@@ -68,8 +68,11 @@
     <ClCompile Include="..\..\Source\ActionRougueLike\Private\SMagicProjectile.cpp">
       <Filter>Source\ActionRougueLike\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ActionRougueLike\Private\STargetDummy.cpp">
+      <Filter>Source\ActionRougueLike\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\ActionRougueLike\Public">
-      <UniqueIdentifier>{80D31790-5842-4D6D-A814-F9C6B1518659}</UniqueIdentifier>
+      <UniqueIdentifier>{D944D75B-B790-4C14-BD22-BA763C7493E6}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\ActionRougueLike\Public\ExplosiveObject.h">
       <Filter>Source\ActionRougueLike\Public</Filter>
@@ -90,6 +93,9 @@
       <Filter>Source\ActionRougueLike\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ActionRougueLike\Public\SMagicProjectile.h">
+      <Filter>Source\ActionRougueLike\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ActionRougueLike\Public\STargetDummy.h">
       <Filter>Source\ActionRougueLike\Public</Filter>
     </ClInclude>
   </ItemGroup>

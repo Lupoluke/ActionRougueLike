@@ -25,8 +25,8 @@ void EmptyLinkFunctionForGeneratedCodeActionRougueLike_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x283792BF,
-				0xA3E54100,
+				0x1C02A980,
+				0x2D01AD93,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
