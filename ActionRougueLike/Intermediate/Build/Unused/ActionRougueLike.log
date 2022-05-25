@@ -1,12 +1,21 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (F:\ToolPerUnreal\GitHubRepository\ActionRougueLike).
+  Parsing headers for ActionRougueLikeEditor
+    Running UnrealHeaderTool "F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\ActionRougueLike.uproject" "F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\ActionRougueLikeEditor\Development\ActionRougueLikeEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\gabri\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  Reflection code generated for ActionRougueLikeEditor in 2,9009156 seconds
   Building ActionRougueLikeEditor...
   Using Visual Studio 2019 14.32.31329 toolchain (F:\Compilatori\VisualStudio_2022\VC\Tools\MSVC\14.32.31326) and Windows 10.0.20348.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 32 processes...
-    [1/4] STargetDummy.cpp
-    [2/4] UE4Editor-ActionRougueLike.lib
+  Building 10 actions with 32 processes...
+    [1/10] ActionRougueLike.init.gen.cpp
+    [2/10] SAttributeComponent.cpp
+    [3/10] STargetDummy.cpp
+    [4/10] SAttributeComponent.gen.cpp
+    [5/10] SMagicProjectile.cpp
+    [6/10] SCharacter.gen.cpp
+    [7/10] SCharacter.cpp
+    [8/10] UE4Editor-ActionRougueLike.lib
        Creazione della libreria F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Development\ActionRougueLike\UE4Editor-ActionRougueLike.lib e dell'oggetto F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Development\ActionRougueLike\UE4Editor-ActionRougueLike.exp
-    [3/4] UE4Editor-ActionRougueLike.dll
+    [9/10] UE4Editor-ActionRougueLike.dll
        Creazione della libreria F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Development\ActionRougueLike\UE4Editor-ActionRougueLike.suppressed.lib e dell'oggetto F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Development\ActionRougueLike\UE4Editor-ActionRougueLike.suppressed.exp
-    [4/4] ActionRougueLikeEditor.target
-  Total time in Parallel executor: 1,02 seconds
-  Total execution time: 1,31 seconds
+    [10/10] ActionRougueLikeEditor.target
+  Total time in Parallel executor: 2,15 seconds
+  Total execution time: 5,38 seconds

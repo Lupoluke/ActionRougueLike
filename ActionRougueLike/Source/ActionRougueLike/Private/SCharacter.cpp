@@ -38,6 +38,17 @@ ASCharacter::ASCharacter()
 
 }
 
+
+void ASCharacter::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+
+	AttributeComp->OnHealthChanged.AddDynamic(this, &ASCharacter::OnHealthChange);
+
+}
+
+
+
 // Called when the game starts or when spawned
 void ASCharacter::BeginPlay()
 {
@@ -194,5 +205,14 @@ void ASCharacter::PrimaryInteract()
 
 }
 
+void ASCharacter::OnHealthChange(AActor* InstigateActor, USAttributeComponent* OwningComp, float NewHealth, float Delta)
+{
+	if (NewHealth>= 0.0f && Delta<0.0f)
 
+		{
+		APlayerController* Pc = Cast<APlayerController>(GetController());
+		DisableInput(Pc);
+		}
+
+}
 

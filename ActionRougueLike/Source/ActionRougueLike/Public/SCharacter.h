@@ -77,6 +77,11 @@ protected:
 	void PrimaryInteract();
 
 
+	UFUNCTION()
+		void OnHealthChange(AActor* InstigateActor, USAttributeComponent* OwningComp, float NewHealth, float Delta);
+
+	virtual void PostInitializeComponents() override;
+
 
 public:	
 	// Called every frame

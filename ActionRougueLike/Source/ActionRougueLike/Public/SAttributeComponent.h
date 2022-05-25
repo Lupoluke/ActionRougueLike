@@ -17,9 +17,6 @@ class ACTIONROUGUELIKE_API USAttributeComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
-public:	
-	// Sets default values for this component's properties
-	USAttributeComponent();
 
 protected:
 
@@ -30,8 +27,9 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	
+	UFUNCTION(BlueprintCallable)
+	bool isAlive() const;
 
 	UPROPERTY(BlueprintAssignable)
 		FOnHealthChanged OnHealthChanged;
@@ -39,5 +37,11 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Attributes")
 	bool ApplyHealthChange(float Delta);
 
+
+	// Called every frame
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+	// Sets default values for this component's properties
+	USAttributeComponent();
 
 };

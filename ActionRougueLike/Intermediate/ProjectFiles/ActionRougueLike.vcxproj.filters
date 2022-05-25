@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ActionRougueLike.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{2B21EE0F-616D-42B2-97DF-13F35E4C9231}</UniqueIdentifier>
+      <UniqueIdentifier>{ECD0C7CF-630F-470E-8E12-C32417208AD5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ActionRougueLike.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{1512EFF8-95AE-4CD0-BC7B-690601A25465}</UniqueIdentifier>
+      <UniqueIdentifier>{643C7C0B-11CE-4F0F-99B2-B0B99E6858EB}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ActionRougueLike">
-      <UniqueIdentifier>{699EB042-06B2-45C0-B8FA-B96D4A120443}</UniqueIdentifier>
+      <UniqueIdentifier>{E94759B0-94B4-491B-AA06-91AD0D528551}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ActionRougueLike\ActionRougueLike.Build.cs">
       <Filter>Source\ActionRougueLike</Filter>
@@ -45,7 +45,7 @@
       <Filter>Source\ActionRougueLike</Filter>
     </ClInclude>
     <Filter Include="Source\ActionRougueLike\Private">
-      <UniqueIdentifier>{503A702A-4D7E-493A-A41A-B121CFE0FDF0}</UniqueIdentifier>
+      <UniqueIdentifier>{F41810BD-C6C2-4584-9B67-4B1275D2668D}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ActionRougueLike\Private\ExplosiveObject.cpp">
       <Filter>Source\ActionRougueLike\Private</Filter>
@@ -53,7 +53,16 @@
     <ClCompile Include="..\..\Source\ActionRougueLike\Private\SAttributeComponent.cpp">
       <Filter>Source\ActionRougueLike\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ActionRougueLike\Private\SBaseProjectile.cpp">
+      <Filter>Source\ActionRougueLike\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ActionRougueLike\Private\SBlackHole.cpp">
+      <Filter>Source\ActionRougueLike\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ActionRougueLike\Private\SCharacter.cpp">
+      <Filter>Source\ActionRougueLike\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ActionRougueLike\Private\SDashProjectile.cpp">
       <Filter>Source\ActionRougueLike\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\ActionRougueLike\Private\SGameplayInterface.cpp">
@@ -72,7 +81,7 @@
       <Filter>Source\ActionRougueLike\Private</Filter>
     </ClCompile>
     <Filter Include="Source\ActionRougueLike\Public">
-      <UniqueIdentifier>{D944D75B-B790-4C14-BD22-BA763C7493E6}</UniqueIdentifier>
+      <UniqueIdentifier>{5F0C2A61-E46A-42D5-BE75-C1ACFA04F97F}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\ActionRougueLike\Public\ExplosiveObject.h">
       <Filter>Source\ActionRougueLike\Public</Filter>
@@ -80,7 +89,16 @@
     <ClInclude Include="..\..\Source\ActionRougueLike\Public\SAttributeComponent.h">
       <Filter>Source\ActionRougueLike\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\ActionRougueLike\Public\SBaseProjectile.h">
+      <Filter>Source\ActionRougueLike\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ActionRougueLike\Public\SBlackHole.h">
+      <Filter>Source\ActionRougueLike\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ActionRougueLike\Public\SCharacter.h">
+      <Filter>Source\ActionRougueLike\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ActionRougueLike\Public\SDashProjectile.h">
       <Filter>Source\ActionRougueLike\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\ActionRougueLike\Public\SGameplayInterface.h">
