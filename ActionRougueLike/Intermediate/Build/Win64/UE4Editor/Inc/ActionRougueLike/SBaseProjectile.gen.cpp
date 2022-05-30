@@ -25,6 +25,7 @@ void EmptyLinkFunctionForGeneratedCodeSBaseProjectile() {}
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UParticleSystemComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USoundCue_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(ASBaseProjectile::execExplode)
 	{
@@ -45,19 +46,6 @@ void EmptyLinkFunctionForGeneratedCodeSBaseProjectile() {}
 		P_THIS->OnActorHit(Z_Param_HitComponent,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_NormalImpulse,Z_Param_Out_Hit);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(ASBaseProjectile::execOnActorOverlap)
-	{
-		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComponent);
-		P_GET_OBJECT(AActor,Z_Param_OtherActor);
-		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComp);
-		P_GET_PROPERTY(FIntProperty,Z_Param_OtherBodyIndex);
-		P_GET_UBOOL(Z_Param_bFromSweep);
-		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_SweepResult);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->OnActorOverlap(Z_Param_OverlappedComponent,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult);
-		P_NATIVE_END;
-	}
 	static FName NAME_ASBaseProjectile_Explode = FName(TEXT("Explode"));
 	void ASBaseProjectile::Explode()
 	{
@@ -69,7 +57,6 @@ void EmptyLinkFunctionForGeneratedCodeSBaseProjectile() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "Explode", &ASBaseProjectile::execExplode },
 			{ "OnActorHit", &ASBaseProjectile::execOnActorHit },
-			{ "OnActorOverlap", &ASBaseProjectile::execOnActorOverlap },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -157,94 +144,13 @@ void EmptyLinkFunctionForGeneratedCodeSBaseProjectile() {}
 		{ "ModuleRelativePath", "Public/SBaseProjectile.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ASBaseProjectile_OnActorHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASBaseProjectile, nullptr, "OnActorHit", nullptr, nullptr, sizeof(SBaseProjectile_eventOnActorHit_Parms), Z_Construct_UFunction_ASBaseProjectile_OnActorHit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASBaseProjectile_OnActorHit_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00C80400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ASBaseProjectile_OnActorHit_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ASBaseProjectile_OnActorHit_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ASBaseProjectile_OnActorHit_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASBaseProjectile, nullptr, "OnActorHit", nullptr, nullptr, sizeof(SBaseProjectile_eventOnActorHit_Parms), Z_Construct_UFunction_ASBaseProjectile_OnActorHit_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASBaseProjectile_OnActorHit_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04C80401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ASBaseProjectile_OnActorHit_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ASBaseProjectile_OnActorHit_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_ASBaseProjectile_OnActorHit()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASBaseProjectile_OnActorHit_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics
-	{
-		struct SBaseProjectile_eventOnActorOverlap_Parms
-		{
-			UPrimitiveComponent* OverlappedComponent;
-			AActor* OtherActor;
-			UPrimitiveComponent* OtherComp;
-			int32 OtherBodyIndex;
-			bool bFromSweep;
-			FHitResult SweepResult;
-		};
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OverlappedComponent_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OverlappedComponent;
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OtherActor;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_OtherComp_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_OtherComp;
-		static const UE4CodeGen_Private::FIntPropertyParams NewProp_OtherBodyIndex;
-		static void NewProp_bFromSweep_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bFromSweep;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SweepResult_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_SweepResult;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_OverlappedComponent_MetaData[] = {
-		{ "EditInline", "true" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_OverlappedComponent = { "OverlappedComponent", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SBaseProjectile_eventOnActorOverlap_Parms, OverlappedComponent), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_OverlappedComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_OverlappedComponent_MetaData)) };
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_OtherActor = { "OtherActor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SBaseProjectile_eventOnActorOverlap_Parms, OtherActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_OtherComp_MetaData[] = {
-		{ "EditInline", "true" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_OtherComp = { "OtherComp", nullptr, (EPropertyFlags)0x0010000000080080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SBaseProjectile_eventOnActorOverlap_Parms, OtherComp), Z_Construct_UClass_UPrimitiveComponent_NoRegister, METADATA_PARAMS(Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_OtherComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_OtherComp_MetaData)) };
-	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_OtherBodyIndex = { "OtherBodyIndex", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SBaseProjectile_eventOnActorOverlap_Parms, OtherBodyIndex), METADATA_PARAMS(nullptr, 0) };
-	void Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_bFromSweep_SetBit(void* Obj)
-	{
-		((SBaseProjectile_eventOnActorOverlap_Parms*)Obj)->bFromSweep = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_bFromSweep = { "bFromSweep", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(SBaseProjectile_eventOnActorOverlap_Parms), &Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_bFromSweep_SetBit, METADATA_PARAMS(nullptr, 0) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_SweepResult_MetaData[] = {
-		{ "NativeConst", "" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_SweepResult = { "SweepResult", nullptr, (EPropertyFlags)0x0010008008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SBaseProjectile_eventOnActorOverlap_Parms, SweepResult), Z_Construct_UScriptStruct_FHitResult, METADATA_PARAMS(Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_SweepResult_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_SweepResult_MetaData)) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_OverlappedComponent,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_OtherActor,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_OtherComp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_OtherBodyIndex,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_bFromSweep,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::NewProp_SweepResult,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/SBaseProjectile.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASBaseProjectile, nullptr, "OnActorOverlap", nullptr, nullptr, sizeof(SBaseProjectile_eventOnActorOverlap_Parms), Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -275,6 +181,14 @@ void EmptyLinkFunctionForGeneratedCodeSBaseProjectile() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_EffectComp_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_EffectComp;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileMovement_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ProjectileMovement;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SoundProjectile_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SoundProjectile;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -285,8 +199,7 @@ void EmptyLinkFunctionForGeneratedCodeSBaseProjectile() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ASBaseProjectile_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ASBaseProjectile_Explode, "Explode" }, // 3487652387
-		{ &Z_Construct_UFunction_ASBaseProjectile_OnActorHit, "OnActorHit" }, // 3058373383
-		{ &Z_Construct_UFunction_ASBaseProjectile_OnActorOverlap, "OnActorOverlap" }, // 2135103756
+		{ &Z_Construct_UFunction_ASBaseProjectile_OnActorHit, "OnActorHit" }, // 935475926
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASBaseProjectile_Statics::Class_MetaDataParams[] = {
@@ -325,11 +238,27 @@ void EmptyLinkFunctionForGeneratedCodeSBaseProjectile() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_EffectComp = { "EffectComp", nullptr, (EPropertyFlags)0x002008000009001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASBaseProjectile, EffectComp), Z_Construct_UClass_UParticleSystemComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_EffectComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_EffectComp_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_ProjectileMovement_MetaData[] = {
+		{ "Category", "Projectile" },
+		{ "ModuleRelativePath", "Public/SBaseProjectile.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_ProjectileMovement = { "ProjectileMovement", nullptr, (EPropertyFlags)0x0020080000010001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASBaseProjectile, ProjectileMovement), METADATA_PARAMS(Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_ProjectileMovement_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_ProjectileMovement_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_SoundProjectile_MetaData[] = {
+		{ "Category", "Projectile" },
+		{ "ModuleRelativePath", "Public/SBaseProjectile.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_SoundProjectile = { "SoundProjectile", nullptr, (EPropertyFlags)0x0020080000010001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASBaseProjectile, SoundProjectile), Z_Construct_UClass_USoundCue_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_SoundProjectile_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_SoundProjectile_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASBaseProjectile_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_ImpactVfx,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_SphereComp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_MovementComp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_EffectComp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_ProjectileMovement,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASBaseProjectile_Statics::NewProp_SoundProjectile,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASBaseProjectile_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASBaseProjectile>::IsAbstract,
@@ -358,7 +287,7 @@ void EmptyLinkFunctionForGeneratedCodeSBaseProjectile() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASBaseProjectile, 2297756566);
+	IMPLEMENT_CLASS(ASBaseProjectile, 2090232296);
 	template<> ACTIONROUGUELIKE_API UClass* StaticClass<ASBaseProjectile>()
 	{
 		return ASBaseProjectile::StaticClass();

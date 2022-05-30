@@ -1,0 +1,20 @@
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Development\ActionRougueLike\Definitions.ActionRougueLike.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Source\ActionRougueLike\Public\InteractableObject/SPotion.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Source\ActionRougueLike\Public\InteractableObject/SBaseInteractableObject.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Source\ActionRougueLike\Public\SGameplayInterface.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Inc\ActionRougueLike\SGameplayInterface.generated.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Inc\ActionRougueLike\SBaseInteractableObject.generated.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Source\ActionRougueLike\Public\SAttributeComponent.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Inc\ActionRougueLike\SAttributeComponent.generated.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Inc\ActionRougueLike\SPotion.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/CollisionProfile.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CollisionProfile.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h

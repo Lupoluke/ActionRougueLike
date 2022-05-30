@@ -10,48 +10,70 @@
 
 ASBlackHole::ASBlackHole()
 {
-	RadialForce = CreateDefaultSubobject<URadialForceComponent>("RadialForce");
-	//prendi la forza e mettila negativa
-	RadialForce->ForceStrength = ForceStrength * (-1.0f);
 	
-	MovementComp->InitialSpeed = 4000.0f;
+	RadialForce = CreateDefaultSubobject<URadialForceComponent>("RadialForce");
+	ForceStrength = -250000.0f;
+	RadialForce->ForceStrength = ForceStrength;
+	RadialForce->Radius = 2000.0f;
+	RadialForce->SetupAttachment(SphereComp);
 	
 	//
 	TimeOfLive = 5.0f;
 	ImpulseTime = 1.0f;
-
 	//
-	//SphereComp->OnComponentBeginOverlap.AddDynamic(this, &ASBlackHole::OnActorOverlap);
+	SphereComp->OnComponentBeginOverlap.AddDynamic(this, &ASBlackHole::OnOverlapBegin);
+	ProjectileMovement = 400.0f;
+
+	//setta a zero il contatore dei cicli
+	contatoreTempo = 0.f;
+
 }
 
 
 
 void ASBlackHole::BeginPlay()
 {
-	//assegna un timer e chiama la funzione destory actor
-	GetWorldTimerManager().SetTimer(TimerHandle_Delay, this, &ASBlackHole::DistruggiAttore, TimeOfLive);
+
+	Super::BeginPlay();
 
 	//spara l'impulso
-	GetWorldTimerManager().SetTimer(TimerHandle_Delay, this, &ASBlackHole::FireImpulse, ImpulseTime, true);
-
+	GetWorldTimerManager().SetTimer(TimerHandle_Delay, this, &ASBlackHole::SparaImpulso, ImpulseTime, true);
 
 }
 
-void ASBlackHole::FireImpulse()
+void ASBlackHole::SparaImpulso()
 {
+	UE_LOG(LogTemp, Warning, TEXT("Impulso sparato"));
+	
 	RadialForce->FireImpulse();
 	//lancia la funzione per il check dell'overlap
-	
-}
+	contatoreTempo ++;
 
-void ASBlackHole::OnActorOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
-{
+	UE_LOG(LogTemp, Warning, TEXT ("contatoreTempo è %d"), contatoreTempo);
 
-	if (OtherActor && OtherActor != GetInstigator())
+	if (contatoreTempo> TimeOfLive)
 
 		{
-						
-			if (AStaticMeshActor* StaticMeshActor = Cast<AStaticMeshActor>(OtherActor))
+		//distruggi l'attore
+	
+		DistruggiAttore();
+	
+		}
+
+}
+
+void ASBlackHole::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+
+	UE_LOG(LogTemp, Warning, TEXT("in funzione  OnComponentBeginOverlap"));
+	
+	if ( (OtherActor && OtherActor != GetInstigator()) && (OtherComp != nullptr))
+
+		{
+				
+		AStaticMeshActor* StaticMeshActor = Cast<AStaticMeshActor>(OtherActor);
+
+			if (StaticMeshActor)
 
 				{
 			
@@ -67,10 +89,10 @@ void ASBlackHole::OnActorOverlap(UPrimitiveComponent* OverlappedComponent, AActo
 
 				}
 
-
+		
 		}
-
-
+		
+	
 }
 
 
@@ -78,6 +100,13 @@ void ASBlackHole::OnActorOverlap(UPrimitiveComponent* OverlappedComponent, AActo
 
 void ASBlackHole::DistruggiAttore()
 {
+
+	UE_LOG(LogTemp, Warning, TEXT("Distruggi Attore"));
+
+
+	// Reset timer is cleared by using the timer handle
+	GetWorld()->GetTimerManager().ClearTimer(TimerHandle_Delay);
+
 	//distrugge la skill decorso il tempo indicato
 	Destroy();
 

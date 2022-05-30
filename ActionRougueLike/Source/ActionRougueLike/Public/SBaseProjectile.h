@@ -4,12 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Sound/SoundCue.h"
 #include "SBaseProjectile.generated.h"
 
 
 class USphereComponent;
 class UProjectileMovementComponent;
 class UParticleSystemComponent;
+class USoundCue;
 
 UCLASS()
 class ACTIONROUGUELIKE_API ASBaseProjectile : public AActor
@@ -31,13 +33,16 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Projectile")
 		UParticleSystemComponent* EffectComp;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
+		float ProjectileMovement;
 
-	UFUNCTION()
-		virtual void OnActorOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	UPROPERTY(EditDefaultsOnly, Category = "Projectile")
+		USoundCue* SoundProjectile;
 
-	UFUNCTION()
-		virtual void OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
+	
+	UFUNCTION(BlueprintCallable)
+	void OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 		void Explode();

@@ -13,6 +13,8 @@ USAttributeComponent::USAttributeComponent()
 
 	Health = 100.0f;
 
+	MaxHealth = 120.0f;
+
 	// ...
 }
 
@@ -26,6 +28,21 @@ void USAttributeComponent::BeginPlay()
 	
 }
 
+
+float USAttributeComponent::GetHealth() const
+{
+	return Health;
+}
+
+float USAttributeComponent::GetMaxHealth() const
+{
+	return MaxHealth;
+}
+
+void USAttributeComponent::SetHealth(float NewHealth)
+{
+	Health = NewHealth;
+}
 
 // Called every frame
 void USAttributeComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)

@@ -142,8 +142,8 @@ void ASCharacter::PrimaryAttack_TimeElapsed()
 
 		{
 
-		FVector HandLocation = GetMesh()->GetSocketLocation("Muzzle_01");
-		FTransform SpawnTM = FTransform(GetControlRotation(), HandLocation);
+		FVector HandLocation = ( GetMesh()->GetSocketLocation("Muzzle_01") ) + ProjectileOffset;
+		FTransform SpawnTM = FTransform(GetControlRotation(), HandLocation );
 		FActorSpawnParameters SpawnParams;
 		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 		SpawnParams.Instigator = this;
@@ -207,7 +207,7 @@ void ASCharacter::PrimaryInteract()
 
 void ASCharacter::OnHealthChange(AActor* InstigateActor, USAttributeComponent* OwningComp, float NewHealth, float Delta)
 {
-	if (NewHealth>= 0.0f && Delta<0.0f)
+	if (NewHealth<= 0.0f  /* && Delta<0.0f */)
 
 		{
 		APlayerController* Pc = Cast<APlayerController>(GetController());

@@ -8,6 +8,9 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FHitResult;
 #ifdef ACTIONROUGUELIKE_SBlackHole_generated_h
 #error "SBlackHole.generated.h already included, missing '#pragma once' in SBlackHole.h"
 #endif
@@ -16,13 +19,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define ActionRougueLike_Source_ActionRougueLike_Public_SBlackHole_h_17_SPARSE_DATA
 #define ActionRougueLike_Source_ActionRougueLike_Public_SBlackHole_h_17_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execFireImpulse); \
+	DECLARE_FUNCTION(execOnOverlapBegin); \
+	DECLARE_FUNCTION(execSparaImpulso); \
 	DECLARE_FUNCTION(execDistruggiAttore);
 
 
 #define ActionRougueLike_Source_ActionRougueLike_Public_SBlackHole_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execFireImpulse); \
+	DECLARE_FUNCTION(execOnOverlapBegin); \
+	DECLARE_FUNCTION(execSparaImpulso); \
 	DECLARE_FUNCTION(execDistruggiAttore);
 
 

@@ -74,6 +74,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASCharacter); \
 	FORCEINLINE static uint32 __PPO__InteractionComp() { return STRUCT_OFFSET(ASCharacter, InteractionComp); } \
 	FORCEINLINE static uint32 __PPO__AttributeComp() { return STRUCT_OFFSET(ASCharacter, AttributeComp); } \
 	FORCEINLINE static uint32 __PPO__ProjectileClass() { return STRUCT_OFFSET(ASCharacter, ProjectileClass); } \
+	FORCEINLINE static uint32 __PPO__ProjectileOffset() { return STRUCT_OFFSET(ASCharacter, ProjectileOffset); } \
 	FORCEINLINE static uint32 __PPO__AttackAnim() { return STRUCT_OFFSET(ASCharacter, AttackAnim); }
 
 

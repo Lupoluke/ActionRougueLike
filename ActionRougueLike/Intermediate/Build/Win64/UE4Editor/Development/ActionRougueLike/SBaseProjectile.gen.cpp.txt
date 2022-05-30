@@ -2,4 +2,8 @@ F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate
 F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
 F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Source\ActionRougueLike/Public/SBaseProjectile.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Sound/SoundCue.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Classes\Sound/SoundNode.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SoundNode.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SoundCue.generated.h
 F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Inc\ActionRougueLike\SBaseProjectile.generated.h

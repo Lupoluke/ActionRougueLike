@@ -45,10 +45,13 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Component")
 	USAttributeComponent* AttributeComp;
 
-
 	//projectile class
 	UPROPERTY(EditAnywhere, Category = "Attack")
 	TSubclassOf<AActor> ProjectileClass;
+
+	//offset
+	UPROPERTY(EditAnywhere, Category = "Attack")
+		FVector ProjectileOffset;
 
 
 	//animation

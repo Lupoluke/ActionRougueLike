@@ -37,12 +37,18 @@ static inline void FOnHealthChanged_DelegateWrapper(const FMulticastScriptDelega
 #define ActionRougueLike_Source_ActionRougueLike_Public_SAttributeComponent_h_18_SPARSE_DATA
 #define ActionRougueLike_Source_ActionRougueLike_Public_SAttributeComponent_h_18_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execSetHealth); \
+	DECLARE_FUNCTION(execGetMaxHealth); \
+	DECLARE_FUNCTION(execGetHealth); \
 	DECLARE_FUNCTION(execApplyHealthChange); \
 	DECLARE_FUNCTION(execisAlive);
 
 
 #define ActionRougueLike_Source_ActionRougueLike_Public_SAttributeComponent_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execSetHealth); \
+	DECLARE_FUNCTION(execGetMaxHealth); \
+	DECLARE_FUNCTION(execGetHealth); \
 	DECLARE_FUNCTION(execApplyHealthChange); \
 	DECLARE_FUNCTION(execisAlive);
 
@@ -90,7 +96,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(USAttributeComponent); \
 
 
 #define ActionRougueLike_Source_ActionRougueLike_Public_SAttributeComponent_h_18_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__Health() { return STRUCT_OFFSET(USAttributeComponent, Health); }
+	FORCEINLINE static uint32 __PPO__Health() { return STRUCT_OFFSET(USAttributeComponent, Health); } \
+	FORCEINLINE static uint32 __PPO__MaxHealth() { return STRUCT_OFFSET(USAttributeComponent, MaxHealth); }
 
 
 #define ActionRougueLike_Source_ActionRougueLike_Public_SAttributeComponent_h_15_PROLOG

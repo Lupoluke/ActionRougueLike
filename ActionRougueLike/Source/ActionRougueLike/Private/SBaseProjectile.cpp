@@ -14,9 +14,8 @@ ASBaseProjectile::ASBaseProjectile()
 	PrimaryActorTick.bCanEverTick = true;
 
 	SphereComp = CreateDefaultSubobject<USphereComponent>("SphereComp");
-	SphereComp->SetCollisionProfileName("Projectile");
+	//SphereComp->SetCollisionProfileName("Projectile");
 	//aggiungi l'evento overlap
-	SphereComp->OnComponentBeginOverlap.AddDynamic(this, &ASBaseProjectile::OnActorOverlap);
 	SphereComp->OnComponentHit.AddDynamic(this, &ASBaseProjectile::OnActorHit);
 	RootComponent = SphereComp;
 
@@ -24,16 +23,17 @@ ASBaseProjectile::ASBaseProjectile()
 	EffectComp->SetupAttachment(SphereComp);
 
 	MovementComp = CreateDefaultSubobject<UProjectileMovementComponent>("MovementComp");
-	MovementComp->InitialSpeed = 1000.0f;
+	ProjectileMovement = 8000.0f;
+	MovementComp->InitialSpeed = ProjectileMovement;
+	MovementComp->ProjectileGravityScale = 0.0f;
 	MovementComp->bRotationFollowsVelocity = true;
 	MovementComp->bInitialVelocityInLocalSpace = true;
 
-}
-
-void ASBaseProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
-{
+	//sound cue
+	
 
 }
+
 
 void ASBaseProjectile::OnActorHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
@@ -55,6 +55,7 @@ void ASBaseProjectile::Explode_Implementation()
 		}
 
 }
+
 
 // Called when the game starts or when spawned
 void ASBaseProjectile::BeginPlay()

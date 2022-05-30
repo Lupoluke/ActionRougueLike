@@ -32,6 +32,9 @@ protected:
 		float ImpulseTime;
 
 
+	//aggiungi un contatore per uscire dal loop del ciclo
+	int contatoreTempo;
+
 	//abbiamo bisogno della gestione di un Timer
 	FTimerHandle TimerHandle_Delay;
 
@@ -39,10 +42,11 @@ protected:
 		void DistruggiAttore();
 	
 	UFUNCTION(BlueprintCallable)
-		void FireImpulse();
+		void SparaImpulso();
 
-	//UFUNCTION(BlueprintCallable, Category = "Function BlackHole")
-	void OnActorOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	
+	UFUNCTION(BlueprintCallable)
+	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
 	virtual void BeginPlay() override;
 	
