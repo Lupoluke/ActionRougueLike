@@ -7,6 +7,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "SInteractionComponent.h"
 #include "SAttributeComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 
 // Sets default values
@@ -29,6 +30,11 @@ ASCharacter::ASCharacter()
 
 	//control rotation yaw
 	bUseControllerRotationYaw = false;
+
+	//sockets;
+	HandSocketName = "Muzzle_01";
+
+	//components
 
 	//aggiungi l'interaction component
 	InteractionComp = CreateDefaultSubobject<USInteractionComponent>("InteractionComp");
@@ -133,6 +139,11 @@ void ASCharacter::PrimaryAttack()
 	GetWorldTimerManager().SetTimer(TimerHandle_PrimaryAttack, this, &ASCharacter::PrimaryAttack_TimeElapsed, 0.1f);
 	//se il giocatore muore interrompi il timer--> timer è la variabile timerhandle_PrimaryAttack
 	//GetWorldTimerManager().ClearTimer(TimerHandle_PrimaryAttack);
+
+	//spawn un effetto al lancio
+	UGameplayStatics::SpawnEmitterAttached(CastingEffect, GetMesh(), HandSocketName, FVector::ZeroVector, FRotator::ZeroRotator,EAttachLocation::SnapToTarget);
+
+
 }
 
 void ASCharacter::PrimaryAttack_TimeElapsed()
@@ -142,7 +153,7 @@ void ASCharacter::PrimaryAttack_TimeElapsed()
 
 		{
 
-		FVector HandLocation = ( GetMesh()->GetSocketLocation("Muzzle_01") ) + ProjectileOffset;
+		FVector HandLocation = ( GetMesh()->GetSocketLocation(HandSocketName) ) + ProjectileOffset;
 		FTransform SpawnTM = FTransform(GetControlRotation(), HandLocation );
 		FActorSpawnParameters SpawnParams;
 		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;

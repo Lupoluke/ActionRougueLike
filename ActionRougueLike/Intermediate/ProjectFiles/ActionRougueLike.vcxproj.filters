@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ActionRougueLike.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{07F0A350-F87B-4EBF-91FB-4FE18B4D5561}</UniqueIdentifier>
+      <UniqueIdentifier>{62F90AE6-4662-4D83-AA9C-8FD48A2EFFBF}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ActionRougueLike.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{9D5ABEDE-EC92-474B-BB77-4056C4FE2DDB}</UniqueIdentifier>
+      <UniqueIdentifier>{8532694A-6E4A-4676-BF99-1A785C1DD310}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ActionRougueLike">
-      <UniqueIdentifier>{E3DE27D3-F092-4CFF-85F9-5F0DB5A8DF09}</UniqueIdentifier>
+      <UniqueIdentifier>{F697160D-90FC-48A3-A8F8-C44060BA5B63}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ActionRougueLike\ActionRougueLike.Build.cs">
       <Filter>Source\ActionRougueLike</Filter>
@@ -45,7 +45,7 @@
       <Filter>Source\ActionRougueLike</Filter>
     </ClInclude>
     <Filter Include="Source\ActionRougueLike\Private">
-      <UniqueIdentifier>{118BD8EA-559E-4579-B349-07FA5187A99E}</UniqueIdentifier>
+      <UniqueIdentifier>{F1202038-2276-4459-92DF-5E22A23444E4}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ActionRougueLike\Private\ExplosiveObject.cpp">
       <Filter>Source\ActionRougueLike\Private</Filter>
@@ -65,6 +65,9 @@
     <ClCompile Include="..\..\Source\ActionRougueLike\Private\SDashProjectile.cpp">
       <Filter>Source\ActionRougueLike\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\ActionRougueLike\Private\SGameModeBase.cpp">
+      <Filter>Source\ActionRougueLike\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\ActionRougueLike\Private\SGameplayInterface.cpp">
       <Filter>Source\ActionRougueLike\Private</Filter>
     </ClCompile>
@@ -81,7 +84,7 @@
       <Filter>Source\ActionRougueLike\Private</Filter>
     </ClCompile>
     <Filter Include="Source\ActionRougueLike\Private\AI">
-      <UniqueIdentifier>{FF6CE05F-02AE-4015-868D-11B3BE7DD9D9}</UniqueIdentifier>
+      <UniqueIdentifier>{C2B632C2-CEB4-48FD-91D1-21A9742E5F1C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ActionRougueLike\Private\AI\SAiCharacter.cpp">
       <Filter>Source\ActionRougueLike\Private\AI</Filter>
@@ -96,7 +99,7 @@
       <Filter>Source\ActionRougueLike\Private\AI</Filter>
     </ClCompile>
     <Filter Include="Source\ActionRougueLike\Private\InteractableObject">
-      <UniqueIdentifier>{A4240D3F-74BE-45B1-9884-62CF0A262977}</UniqueIdentifier>
+      <UniqueIdentifier>{7F528825-87F2-4AD3-9EE5-23BCDC883BBB}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ActionRougueLike\Private\InteractableObject\SBaseInteractableObject.cpp">
       <Filter>Source\ActionRougueLike\Private\InteractableObject</Filter>
@@ -105,7 +108,7 @@
       <Filter>Source\ActionRougueLike\Private\InteractableObject</Filter>
     </ClCompile>
     <Filter Include="Source\ActionRougueLike\Public">
-      <UniqueIdentifier>{8E852BAA-2B43-405B-B18B-C6A0E30E4079}</UniqueIdentifier>
+      <UniqueIdentifier>{5C5F1168-636D-4724-B13D-41119749C0E1}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\ActionRougueLike\Public\ExplosiveObject.h">
       <Filter>Source\ActionRougueLike\Public</Filter>
@@ -125,6 +128,9 @@
     <ClInclude Include="..\..\Source\ActionRougueLike\Public\SDashProjectile.h">
       <Filter>Source\ActionRougueLike\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\ActionRougueLike\Public\SGameModeBase.h">
+      <Filter>Source\ActionRougueLike\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\ActionRougueLike\Public\SGameplayInterface.h">
       <Filter>Source\ActionRougueLike\Public</Filter>
     </ClInclude>
@@ -141,7 +147,7 @@
       <Filter>Source\ActionRougueLike\Public</Filter>
     </ClInclude>
     <Filter Include="Source\ActionRougueLike\Public\AI">
-      <UniqueIdentifier>{6B7075C7-9FFB-4212-BC58-3ACFE1833966}</UniqueIdentifier>
+      <UniqueIdentifier>{1614468C-3F4E-4750-9DB9-8AC46C937C05}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\ActionRougueLike\Public\AI\SAiCharacter.h">
       <Filter>Source\ActionRougueLike\Public\AI</Filter>
@@ -156,7 +162,7 @@
       <Filter>Source\ActionRougueLike\Public\AI</Filter>
     </ClInclude>
     <Filter Include="Source\ActionRougueLike\Public\InteractableObject">
-      <UniqueIdentifier>{B298B3EF-B999-4888-9A8A-4A7B791B3144}</UniqueIdentifier>
+      <UniqueIdentifier>{E91EB7A6-3E0B-4D54-8BD2-152BB706173D}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\ActionRougueLike\Public\InteractableObject\SBaseInteractableObject.h">
       <Filter>Source\ActionRougueLike\Public\InteractableObject</Filter>

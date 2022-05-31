@@ -37,7 +37,7 @@ void ASBaseInteractableObject::BeginPlay()
 void ASBaseInteractableObject::Interact_Implementation(APawn* InstigatorPawn)
 {
 
-
+	//logic in derived class
 
 }
 

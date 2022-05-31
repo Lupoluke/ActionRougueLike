@@ -15,18 +15,18 @@ class USAttributeComponent;
 #endif
 #define ACTIONROUGUELIKE_SCharacter_generated_h
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_SPARSE_DATA
-#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_RPC_WRAPPERS \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_SPARSE_DATA
+#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnHealthChange);
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnHealthChange);
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_INCLASS_NO_PURE_DECLS \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASCharacter(); \
 	friend struct Z_Construct_UClass_ASCharacter_Statics; \
@@ -35,7 +35,7 @@ public: \
 	DECLARE_SERIALIZER(ASCharacter)
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_INCLASS \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_INCLASS \
 private: \
 	static void StaticRegisterNativesASCharacter(); \
 	friend struct Z_Construct_UClass_ASCharacter_Statics; \
@@ -44,7 +44,7 @@ public: \
 	DECLARE_SERIALIZER(ASCharacter)
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_STANDARD_CONSTRUCTORS \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ASCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASCharacter) \
@@ -57,7 +57,7 @@ private: \
 public:
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_ENHANCED_CONSTRUCTORS \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ASCharacter(ASCharacter&&); \
@@ -68,37 +68,39 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASCharacter); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASCharacter)
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_PRIVATE_PROPERTY_OFFSET \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__SpringArmComp() { return STRUCT_OFFSET(ASCharacter, SpringArmComp); } \
 	FORCEINLINE static uint32 __PPO__CameraComp() { return STRUCT_OFFSET(ASCharacter, CameraComp); } \
 	FORCEINLINE static uint32 __PPO__InteractionComp() { return STRUCT_OFFSET(ASCharacter, InteractionComp); } \
 	FORCEINLINE static uint32 __PPO__AttributeComp() { return STRUCT_OFFSET(ASCharacter, AttributeComp); } \
 	FORCEINLINE static uint32 __PPO__ProjectileClass() { return STRUCT_OFFSET(ASCharacter, ProjectileClass); } \
 	FORCEINLINE static uint32 __PPO__ProjectileOffset() { return STRUCT_OFFSET(ASCharacter, ProjectileOffset); } \
-	FORCEINLINE static uint32 __PPO__AttackAnim() { return STRUCT_OFFSET(ASCharacter, AttackAnim); }
+	FORCEINLINE static uint32 __PPO__HandSocketName() { return STRUCT_OFFSET(ASCharacter, HandSocketName); } \
+	FORCEINLINE static uint32 __PPO__AttackAnim() { return STRUCT_OFFSET(ASCharacter, AttackAnim); } \
+	FORCEINLINE static uint32 __PPO__CastingEffect() { return STRUCT_OFFSET(ASCharacter, CastingEffect); }
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_15_PROLOG
-#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_GENERATED_BODY_LEGACY \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_16_PROLOG
+#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_PRIVATE_PROPERTY_OFFSET \
-	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_SPARSE_DATA \
-	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_RPC_WRAPPERS \
-	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_INCLASS \
-	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_STANDARD_CONSTRUCTORS \
+	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_PRIVATE_PROPERTY_OFFSET \
+	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_SPARSE_DATA \
+	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_RPC_WRAPPERS \
+	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_INCLASS \
+	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_GENERATED_BODY \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_PRIVATE_PROPERTY_OFFSET \
-	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_SPARSE_DATA \
-	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
-	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_INCLASS_NO_PURE_DECLS \
-	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_18_ENHANCED_CONSTRUCTORS \
+	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_PRIVATE_PROPERTY_OFFSET \
+	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_SPARSE_DATA \
+	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_INCLASS_NO_PURE_DECLS \
+	ActionRougueLike_Source_ActionRougueLike_Public_SCharacter_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

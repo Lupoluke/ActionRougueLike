@@ -17,6 +17,10 @@ ASAiCharacter::ASAiCharacter()
  
 	PawnSensingComp = CreateDefaultSubobject<UPawnSensingComponent>("PawnSensingComp");
 
+	//assicurati che l'ia ci sia anche in caso di spawn
+
+	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
+
 }
 
 void ASAiCharacter::PostInitializeComponents()

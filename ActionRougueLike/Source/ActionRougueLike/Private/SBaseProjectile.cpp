@@ -6,6 +6,7 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "Sound/SoundCue.h"
 
 // Sets default values
 ASBaseProjectile::ASBaseProjectile()
@@ -49,6 +50,10 @@ void ASBaseProjectile::Explode_Implementation()
 	
 		//richiede un particlesystem non un particlesystemcomponent!!
 		UGameplayStatics::SpawnEmitterAtLocation(this, ImpactVfx, GetActorLocation(), GetActorRotation());
+		
+		//effettua un suono
+		UGameplayStatics::PlaySoundAtLocation(this, SoundProjectile, GetActorLocation(), GetActorRotation());
+		 
 
 		Destroy();
 

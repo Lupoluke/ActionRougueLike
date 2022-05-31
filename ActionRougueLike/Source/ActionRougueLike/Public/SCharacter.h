@@ -11,6 +11,7 @@ class USpringArmComponent;
 class USInteractionComponent;
 class UAnimMontage;
 class USAttributeComponent;
+class UParticleSystem;
 
 UCLASS()
 class ACTIONROUGUELIKE_API ASCharacter : public ACharacter
@@ -49,14 +50,23 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Attack")
 	TSubclassOf<AActor> ProjectileClass;
 
-	//offset
+	//offset skill pos
 	UPROPERTY(EditAnywhere, Category = "Attack")
 		FVector ProjectileOffset;
+
+	//aggiunta del nome del socket -->visibleanywhere non è modificabile in editor
+	UPROPERTY(VisibleAnywhere, Category = "Effects")
+		FName HandSocketName;
+
 
 
 	//animation
 	UPROPERTY(EditAnywhere, Category = "Attack")
 	UAnimMontage* AttackAnim;
+
+	//ParticleSystem
+	UPROPERTY(EditAnywhere, Category = "Effects")
+		UParticleSystem* CastingEffect;
 
 	//timerHandler
 	FTimerHandle TimerHandle_PrimaryAttack;
