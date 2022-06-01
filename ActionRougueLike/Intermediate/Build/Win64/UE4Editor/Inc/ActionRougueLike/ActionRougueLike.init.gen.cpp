@@ -25,7 +25,7 @@ void EmptyLinkFunctionForGeneratedCodeActionRougueLike_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x9CC9E2EC,
+				0xB33D179E,
 				0xF57E0147,
 				METADATA_PARAMS(nullptr, 0)
 			};

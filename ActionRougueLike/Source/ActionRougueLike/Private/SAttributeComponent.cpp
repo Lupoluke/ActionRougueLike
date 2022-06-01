@@ -2,6 +2,8 @@
 
 
 #include "SAttributeComponent.h"
+#include "Kismet/KismetSystemLibrary.h"
+
 
 // Sets default values for this component's properties
 USAttributeComponent::USAttributeComponent()
@@ -57,14 +59,59 @@ bool USAttributeComponent::isAlive() const
 	return (Health > 0.0f);
 }
 
-bool USAttributeComponent::ApplyHealthChange(float Delta)
+bool USAttributeComponent::ApplyHealthChange(AActor* InstigatorActor, float Delta)
 {
-	
-	Health += Delta;
-	
-	//lancia un evento
-	OnHealthChanged.Broadcast(nullptr, this, Health, Delta);
 
-	return true;
+	AActor* ActorOwner = this->GetOwner();
+	FString ActorOwnerName = ActorOwner->GetName();
+
+	float OldHealth = Health;
+
+	//Health = FMath::Clamp(Health+Delta, 0.0f, MaxHealth);
+	Health = FMath::Clamp(Health-Delta, 0.0f, MaxHealth);
+
+	// old	Health += Delta;
+	float ActualDelta = Health - OldHealth;
+
+	//setta la nuova salute
+	SetHealth(Health);
+
+	//lancia un evento
+	//OnHealthChanged.Broadcast(nullptr, this, Health, Delta); //old
+	OnHealthChanged.Broadcast(InstigatorActor, this, Health, ActualDelta);
+	
+	UE_LOG(LogTemp, Warning, TEXT("SALUTE E' %f"), Health);
+	UE_LOG(LogTemp, Warning, TEXT("Soggetto è %s"), *ActorOwnerName);
+
+	return ActualDelta != 0;
+
+}
+
+USAttributeComponent* USAttributeComponent::GetAttributes(AActor* FromActor)
+{
+
+	if (FromActor)
+
+		{
+	
+		return Cast<USAttributeComponent>(FromActor->GetComponentByClass(USAttributeComponent::StaticClass()));
+
+
+		}
+
+	return nullptr;
+}
+
+bool USAttributeComponent::IsActorAlive(AActor* Actor)
+{
+
+	USAttributeComponent* AttributeComp = GetAttributes(Actor);
+
+	if (AttributeComp)
+		{
+		return AttributeComp->isAlive();
+		}
+
+	return false;
 }
 

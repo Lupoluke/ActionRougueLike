@@ -8,7 +8,7 @@
 
 //da il pawnsensing all'Ia
 class UPawnSensingComponent;
-
+class USAttributeComponent;
 
 UCLASS()
 class ACTIONROUGUELIKE_API ASAiCharacter : public ACharacter
@@ -25,6 +25,21 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	UPawnSensingComponent* PawnSensingComp;
+
+
+	//add l'attribute component
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Component")
+	USAttributeComponent* AttributeComp;
+
+
+	UFUNCTION()
+	void OnHealthChange(AActor* InstigateActor, USAttributeComponent* OwningComp, float NewHealth, float Delta);
+
+	UFUNCTION()
+		void SetTargetActor(AActor* NewTarget);
+
+
+
 
 UFUNCTION()
 	void OnPawnSeen(APawn* Pawn);

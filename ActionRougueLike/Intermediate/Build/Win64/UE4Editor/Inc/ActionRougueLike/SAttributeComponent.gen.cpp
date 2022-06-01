@@ -59,9 +59,9 @@ void EmptyLinkFunctionForGeneratedCodeSAttributeComponent() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_ActionRougueLike_OnHealthChanged__DelegateSignature_Statics::Function_MetaDataParams[] = {
-		{ "Comment", "//creazione di un evento\n" },
+		{ "Comment", "//creazione di un evento ..> event dispatcher\n" },
 		{ "ModuleRelativePath", "Public/SAttributeComponent.h" },
-		{ "ToolTip", "creazione di un evento" },
+		{ "ToolTip", "creazione di un evento ..> event dispatcher" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_ActionRougueLike_OnHealthChanged__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_ActionRougueLike, nullptr, "OnHealthChanged__DelegateSignature", nullptr, nullptr, sizeof(_Script_ActionRougueLike_eventOnHealthChanged_Parms), Z_Construct_UDelegateFunction_ActionRougueLike_OnHealthChanged__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ActionRougueLike_OnHealthChanged__DelegateSignature_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_ActionRougueLike_OnHealthChanged__DelegateSignature_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_ActionRougueLike_OnHealthChanged__DelegateSignature_Statics::Function_MetaDataParams)) };
@@ -98,10 +98,11 @@ void EmptyLinkFunctionForGeneratedCodeSAttributeComponent() {}
 	}
 	DEFINE_FUNCTION(USAttributeComponent::execApplyHealthChange)
 	{
+		P_GET_OBJECT(AActor,Z_Param_InstigatorActor);
 		P_GET_PROPERTY(FFloatProperty,Z_Param_Delta);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(bool*)Z_Param__Result=P_THIS->ApplyHealthChange(Z_Param_Delta);
+		*(bool*)Z_Param__Result=P_THIS->ApplyHealthChange(Z_Param_InstigatorActor,Z_Param_Delta);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(USAttributeComponent::execisAlive)
@@ -127,9 +128,11 @@ void EmptyLinkFunctionForGeneratedCodeSAttributeComponent() {}
 	{
 		struct SAttributeComponent_eventApplyHealthChange_Parms
 		{
+			AActor* InstigatorActor;
 			float Delta;
 			bool ReturnValue;
 		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InstigatorActor;
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Delta;
 		static void NewProp_ReturnValue_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
@@ -139,6 +142,7 @@ void EmptyLinkFunctionForGeneratedCodeSAttributeComponent() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_USAttributeComponent_ApplyHealthChange_Statics::NewProp_InstigatorActor = { "InstigatorActor", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SAttributeComponent_eventApplyHealthChange_Parms, InstigatorActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USAttributeComponent_ApplyHealthChange_Statics::NewProp_Delta = { "Delta", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SAttributeComponent_eventApplyHealthChange_Parms, Delta), METADATA_PARAMS(nullptr, 0) };
 	void Z_Construct_UFunction_USAttributeComponent_ApplyHealthChange_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 	{
@@ -146,6 +150,7 @@ void EmptyLinkFunctionForGeneratedCodeSAttributeComponent() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_USAttributeComponent_ApplyHealthChange_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(SAttributeComponent_eventApplyHealthChange_Parms), &Z_Construct_UFunction_USAttributeComponent_ApplyHealthChange_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USAttributeComponent_ApplyHealthChange_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USAttributeComponent_ApplyHealthChange_Statics::NewProp_InstigatorActor,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USAttributeComponent_ApplyHealthChange_Statics::NewProp_Delta,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USAttributeComponent_ApplyHealthChange_Statics::NewProp_ReturnValue,
 	};
@@ -330,7 +335,7 @@ void EmptyLinkFunctionForGeneratedCodeSAttributeComponent() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_ActionRougueLike,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_USAttributeComponent_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_USAttributeComponent_ApplyHealthChange, "ApplyHealthChange" }, // 2593999559
+		{ &Z_Construct_UFunction_USAttributeComponent_ApplyHealthChange, "ApplyHealthChange" }, // 2818097281
 		{ &Z_Construct_UFunction_USAttributeComponent_GetHealth, "GetHealth" }, // 2416702925
 		{ &Z_Construct_UFunction_USAttributeComponent_GetMaxHealth, "GetMaxHealth" }, // 826761149
 		{ &Z_Construct_UFunction_USAttributeComponent_isAlive, "isAlive" }, // 2754102072
@@ -396,7 +401,7 @@ void EmptyLinkFunctionForGeneratedCodeSAttributeComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(USAttributeComponent, 250469252);
+	IMPLEMENT_CLASS(USAttributeComponent, 1614750777);
 	template<> ACTIONROUGUELIKE_API UClass* StaticClass<USAttributeComponent>()
 	{
 		return USAttributeComponent::StaticClass();

@@ -61,3 +61,7 @@ F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\AIModule\Classes\BehaviorTree/Bla
 F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BlackboardData.generated.h
 F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BlackboardComponent.generated.h
 F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Source\ActionRougueLike\Public\SAttributeComponent.h
+F:\ToolPerUnreal\GitHubRepository\ActionRougueLike\ActionRougueLike\Intermediate\Build\Win64\UE4Editor\Inc\ActionRougueLike\SAttributeComponent.generated.h
+F:\Unreal Engine\UE_4.26\Engine\Source\Runtime\AIModule\Classes\BrainComponent.h
+F:\Unreal Engine\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BrainComponent.generated.h

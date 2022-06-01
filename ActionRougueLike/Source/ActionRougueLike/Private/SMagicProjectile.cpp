@@ -6,6 +6,10 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "SAttributeComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "Components/AudioComponent.h"
+#include "Sound/SoundCue.h"
+#include "Camera/CameraShake.h"
 
 // Sets default values
 ASMagicProjectile::ASMagicProjectile()
@@ -16,9 +20,6 @@ ASMagicProjectile::ASMagicProjectile()
 	SphereComp = CreateDefaultSubobject<USphereComponent>("SphereComp");
 	//setta di default le collisioni dell'oggetto-->ovviato creando un nuovo profilo di collisioni
 	//SphereComp->SetCollisionObjectType(ECC_WorldDynamic);
-	//SphereComp->SetCollisionResponseToAllChannels(ECR_Ignore);
-	//SphereComp->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
-	//definisci un nuovo tipo per le collisioni
 	SphereComp->SetCollisionProfileName("Projectile");
 	//aggiungi l'evento overlap
 	SphereComp->OnComponentBeginOverlap.AddDynamic(this, &ASMagicProjectile::OnActorOverlap);
@@ -33,6 +34,19 @@ ASMagicProjectile::ASMagicProjectile()
 	MovementComp->bRotationFollowsVelocity = true;
 	MovementComp->bInitialVelocityInLocalSpace = true;
 
+	//
+	SphereComp->SetEnableGravity(false);
+
+
+	//audio component
+	AudioComp = CreateDefaultSubobject<UAudioComponent>("AudioComp");
+	//attached al root component
+	AudioComp->SetupAttachment(RootComponent);
+
+	//default damage
+	ProjectileDamage = 50.0f;
+
+
 }
 
 void ASMagicProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -45,8 +59,8 @@ void ASMagicProjectile::OnActorOverlap(UPrimitiveComponent* OverlappedComponent,
 
 			if (AttributeComp)
 			{
-				AttributeComp->ApplyHealthChange(-20.0f);
-
+				AttributeComp->ApplyHealthChange( GetInstigator(), ProjectileDamage );
+				UE_LOG(LogTemp, Warning, TEXT("DANNO APPLICATO %f"), ProjectileDamage);
 
 				//una volta colpito distruggi l'oggetto
 

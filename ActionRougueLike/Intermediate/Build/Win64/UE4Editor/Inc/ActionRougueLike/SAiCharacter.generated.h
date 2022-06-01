@@ -9,6 +9,8 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class APawn;
+class AActor;
+class USAttributeComponent;
 #ifdef ACTIONROUGUELIKE_SAiCharacter_generated_h
 #error "SAiCharacter.generated.h already included, missing '#pragma once' in SAiCharacter.h"
 #endif
@@ -17,12 +19,16 @@ class APawn;
 #define ActionRougueLike_Source_ActionRougueLike_Public_AI_SAiCharacter_h_16_SPARSE_DATA
 #define ActionRougueLike_Source_ActionRougueLike_Public_AI_SAiCharacter_h_16_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execOnPawnSeen);
+	DECLARE_FUNCTION(execOnPawnSeen); \
+	DECLARE_FUNCTION(execSetTargetActor); \
+	DECLARE_FUNCTION(execOnHealthChange);
 
 
 #define ActionRougueLike_Source_ActionRougueLike_Public_AI_SAiCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execOnPawnSeen);
+	DECLARE_FUNCTION(execOnPawnSeen); \
+	DECLARE_FUNCTION(execSetTargetActor); \
+	DECLARE_FUNCTION(execOnHealthChange);
 
 
 #define ActionRougueLike_Source_ActionRougueLike_Public_AI_SAiCharacter_h_16_INCLASS_NO_PURE_DECLS \
@@ -68,7 +74,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASAiCharacter); \
 
 
 #define ActionRougueLike_Source_ActionRougueLike_Public_AI_SAiCharacter_h_16_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__PawnSensingComp() { return STRUCT_OFFSET(ASAiCharacter, PawnSensingComp); }
+	FORCEINLINE static uint32 __PPO__PawnSensingComp() { return STRUCT_OFFSET(ASAiCharacter, PawnSensingComp); } \
+	FORCEINLINE static uint32 __PPO__AttributeComp() { return STRUCT_OFFSET(ASAiCharacter, AttributeComp); }
 
 
 #define ActionRougueLike_Source_ActionRougueLike_Public_AI_SAiCharacter_h_13_PROLOG

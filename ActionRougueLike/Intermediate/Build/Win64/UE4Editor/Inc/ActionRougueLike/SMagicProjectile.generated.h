@@ -16,18 +16,18 @@ struct FHitResult;
 #endif
 #define ACTIONROUGUELIKE_SMagicProjectile_generated_h
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_SPARSE_DATA
-#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_RPC_WRAPPERS \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_SPARSE_DATA
+#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnActorOverlap);
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnActorOverlap);
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_INCLASS_NO_PURE_DECLS \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASMagicProjectile(); \
 	friend struct Z_Construct_UClass_ASMagicProjectile_Statics; \
@@ -36,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(ASMagicProjectile)
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_INCLASS \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_INCLASS \
 private: \
 	static void StaticRegisterNativesASMagicProjectile(); \
 	friend struct Z_Construct_UClass_ASMagicProjectile_Statics; \
@@ -45,7 +45,7 @@ public: \
 	DECLARE_SERIALIZER(ASMagicProjectile)
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_STANDARD_CONSTRUCTORS \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ASMagicProjectile(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASMagicProjectile) \
@@ -58,7 +58,7 @@ private: \
 public:
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_ENHANCED_CONSTRUCTORS \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ASMagicProjectile(ASMagicProjectile&&); \
@@ -69,33 +69,35 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASMagicProjectile); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASMagicProjectile)
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_PRIVATE_PROPERTY_OFFSET \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__SphereComp() { return STRUCT_OFFSET(ASMagicProjectile, SphereComp); } \
 	FORCEINLINE static uint32 __PPO__MovementComp() { return STRUCT_OFFSET(ASMagicProjectile, MovementComp); } \
-	FORCEINLINE static uint32 __PPO__EffectComp() { return STRUCT_OFFSET(ASMagicProjectile, EffectComp); }
+	FORCEINLINE static uint32 __PPO__EffectComp() { return STRUCT_OFFSET(ASMagicProjectile, EffectComp); } \
+	FORCEINLINE static uint32 __PPO__AudioComp() { return STRUCT_OFFSET(ASMagicProjectile, AudioComp); } \
+	FORCEINLINE static uint32 __PPO__ProjectileDamage() { return STRUCT_OFFSET(ASMagicProjectile, ProjectileDamage); }
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_13_PROLOG
-#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_GENERATED_BODY_LEGACY \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_14_PROLOG
+#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_PRIVATE_PROPERTY_OFFSET \
-	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_SPARSE_DATA \
-	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_RPC_WRAPPERS \
-	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_INCLASS \
-	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_STANDARD_CONSTRUCTORS \
+	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_PRIVATE_PROPERTY_OFFSET \
+	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_SPARSE_DATA \
+	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_RPC_WRAPPERS \
+	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_INCLASS \
+	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_GENERATED_BODY \
+#define ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_PRIVATE_PROPERTY_OFFSET \
-	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_SPARSE_DATA \
-	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_INCLASS_NO_PURE_DECLS \
-	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_17_ENHANCED_CONSTRUCTORS \
+	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_PRIVATE_PROPERTY_OFFSET \
+	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_SPARSE_DATA \
+	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_INCLASS_NO_PURE_DECLS \
+	ActionRougueLike_Source_ActionRougueLike_Public_SMagicProjectile_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
